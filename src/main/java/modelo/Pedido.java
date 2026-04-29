@@ -12,7 +12,7 @@ public class Pedido {
     }
 
     public void mostrarDetalle() {
-        System.out.println("Cliente: " + cliente.nombre);
+        System.out.println("Cliente: " + cliente.getNombre());
         System.out.println("Producto: " + producto);
         System.out.println("Cantidad: " + cantidad);
     }

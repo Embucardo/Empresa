@@ -1,13 +1,29 @@
 package modelo;
+import java.time.LocalDate;
+import java.time.Period;
 
 public class Cliente {
-    String nombre;
+    private String nombre;
+    private String apellido;
+    private String email;
+    private LocalDate fechaNacimiento;
 
-    public Cliente(String nombre) {
+    public Cliente(String nombre, String apellido, String email, LocalDate fechaNacimiento) {
         this.nombre = nombre;
+        this.apellido = apellido;
+        this.email = email;
+        this.fechaNacimiento = fechaNacimiento;
+    }
+
+    public int calcularEdad() {
+        return Period.between(fechaNacimiento, LocalDate.now()).getYears();
     }
 
     public void realizarPedido(Tienda tienda, String producto) {
         tienda.procesarPedido(this, producto);
+    }
+
+    public String getNombre() {
+        return nombre;
     }
 }
