@@ -1,9 +1,9 @@
 package modelo;
 
 public class Pedido {
-    Cliente cliente;
-    String producto;
-    int cantidad;
+    private Cliente cliente;
+    private String producto;
+    private int cantidad;
 
     public Pedido(Cliente cliente, String producto, int cantidad) {
         this.cliente = cliente;
@@ -15,5 +15,6 @@ public class Pedido {
         System.out.println("Cliente: " + cliente.getNombre());
         System.out.println("Producto: " + producto);
         System.out.println("Cantidad: " + cantidad);
+        System.out.println("Edad: " + cliente.calcularEdad());
     }
 }

@@ -1,4 +1,5 @@
 package modelo;
+
 import java.time.LocalDate;
 import java.time.Period;
 
@@ -19,8 +20,8 @@ public class Cliente {
         return Period.between(fechaNacimiento, LocalDate.now()).getYears();
     }
 
-    public void realizarPedido(Tienda tienda, String producto) {
-        tienda.procesarPedido(this, producto);
+    public void realizarPedido(Tienda tienda, String producto, int cantidad) {
+        tienda.procesarPedido(this, producto, cantidad);
     }
 
     public String getNombre() {
